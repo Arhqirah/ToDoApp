@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="toDoApp.css">
+</head>
+<body>
+    <div id="task-form-container">
+        <form id="new-task-form">
+            <input type="text" id="new-task" placeholder="Indtast ny opgave" required>
+            <select id="task-category">
+                <option value="appointments">Aftaler</option>
+                <option value="shopping">Inkøb</option>
+                <option value="birthdays">Fødselsdage</option>
+                <option value="work">Arbejde</option>
+                <option value="others">Andre</option>
+            </select>
+            <input type="text" id="task-note" placeholder="Tilføj note (max 50 tegn)" maxlength="50">
+            <input type="date" id="task-date" required>
+            <button type="submit">Tilføj Opgave</button>
+        </form>
+    </div>
+    <select id="category-filter">
+        <option value="all">Alle</option>
+        <option value="appointments">Aftaler</option>
+        <option value="shopping">Inkøb</option>
+        <option value="birthdays">Fødselsdage</option>
+        <option value="work">Arbejde</option>
+        <option value="others">Andre</option>
+    </select>
+    <div id="calendar">
+        <div id="week-selector">
+            <button type="button" id="prev-week">← Forrige Uge</button>
+            <button type="button" id="next-week">Næste Uge →</button>
+        </div>
+        <div id="month-week-info"></div>
+        <div id="days" class="days"></div>
+
+    </div>
+    <h1>Made by Melbye Design @2024</h1>
+
+
+    <script src="toDoApp.js"></script>
+</body>
+</html>

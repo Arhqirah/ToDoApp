@@ -1,0 +1,234 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #292b2f; 
+    color: #eaeaea;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+}
+
+#task-form-container {
+    margin-bottom: 20px;
+}
+
+#new-task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#new-task-form input[type="text"],
+#new-task-form input[type="date"] {
+    padding: 10px;
+    border: 1px solid #42454a;
+    border-radius: 6px;
+    width: 100%;
+    background-color: #1e2023;
+    color: #eaeaea; 
+}
+
+#new-task-form button {
+    padding: 10px 20px;
+    background-color: #34373d;
+    border: none;
+    border-radius: 6px;
+    color: #eaeaea;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#new-task-form button:hover {
+    background-color: #4e5257;
+}
+.task.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background-color: #08562A;
+}
+
+.complete-button {
+    color: white; /* Hvid farve på teksten */
+    background-color: #28a745; /* Grøn baggrund */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete-button:hover {
+    background-color: #218838; /* Mørkere grøn ved hover */
+}
+
+.delete-button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #ff3333;
+}
+
+
+#calendar {
+    background-color: #2b2e33;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.weekdays div,
+.days div {
+    padding: 10px;
+  
+  
+}
+
+.weekdays {
+    background-color: #1d1d1d;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+   
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.day {
+    width: calc(100% / 7);
+    min-height: 100px;
+    border-right: 1px solid #42454a;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+    overflow: auto;
+    background-color: #1e2023;
+    color: #eaeaea;
+    border-radius: 4px;
+    margin: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+    font-weight: 900;
+}
+
+
+.task {
+    background-color: #485969;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 14px;
+    word-wrap: break-word; 
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.task-note {
+    font-size: 0.8em; /* Mindre skriftstørrelse for noter */
+    color: #d3d3d3; /* En blidere farve */
+    margin-top: 5px; /* Lidt plads mellem tekst og note */
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #42454a;
+    border-radius: 6px;
+    width: 100%;
+    background-color: #1e2023;
+    color: #eaeaea; 
+}
+
+.task.shopping { background-color: #470191;
+color: #FFFBFB; }
+.task.birthdays { background-color: #91015D;
+color: #FFFBFB; }
+.task.appointments { background-color: #910101; 
+color: #FFFBFB;}
+.task.work { background-color: #015A91; 
+color: #FFFBFB;}
+.task.others { background-color: #3d2101; 
+color: #FFFBFB;}
+
+
+#week-selector {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+#month-week-info {
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 20px;
+    text-align: center;
+}
+
+
+#week-selector button {
+    margin: 0 5px;
+    background-color: #1a1b1d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#week-selector button:hover {
+    background-color: #3b3d42;
+}
+
+.glow {
+
+    border: 2px solid rgba(0, 170, 37, 0.8);
+    z-index: 10;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    #new-task-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #new-task-form input[type="text"],
+    #new-task-form input[type="date"],
+    #new-task-form button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .day {
+        width: 100%;
+        min-height: 120px;
+    }
+
+    .weekdays div,
+    .days div {
+        padding: 15px;
+    }
+
+
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+}
