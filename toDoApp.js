@@ -22,10 +22,9 @@ function generateCalendar(startDate) {
     const daysElement = document.getElementById("days");
     daysElement.innerHTML = "";
     let currentDate = new Date(startDate);
-    // Juster startdatoen til ugens første dag (søndag i USA, mandag i de fleste europæiske lande)
+
     currentDate.setDate(currentDate.getDate() - currentDate.getDay());
 
-    // Dansk datovisningsformat for dagene
     const danskDatoFormat = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
     for (let i = 0; i < 7; i++) {
@@ -33,13 +32,12 @@ function generateCalendar(startDate) {
         dayElement.className = "day";
         dayElement.setAttribute('data-date', currentDate.toISOString().split('T')[0]);
 
-        // Brug det danske format her
         const dateElement = document.createElement("div");
         dateElement.textContent = currentDate.toLocaleDateString('da-DK', danskDatoFormat);
         dayElement.appendChild(dateElement);
 
         daysElement.appendChild(dayElement);
-        currentDate.setDate(currentDate.getDate() + 1); // Gå til næste dag
+        currentDate.setDate(currentDate.getDate() + 1);
     }
     updateWeekInfo(currentStartDate);
     highlightCurrentDay();
@@ -273,7 +271,7 @@ function handleCategoryFilter(e) {
             addTask(task);
             newTaskInput.value = '';
             taskDateInput.value = '';
-            taskNoteInput.value = ''; // Nulstil note inputfeltet
+            taskNoteInput.value = '';
         }
     }
 }
